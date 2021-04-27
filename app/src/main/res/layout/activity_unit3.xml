@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Unit3Activity">
+    <!-- 最外层布局背景为橙色，它的下级视图在水平方向排列 -->
+    <LinearLayout
+        android:id="@+id/unit3_linerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#ffff99"
+        android:padding="5dp">
+        <!-- 第一格子布局背景为红色，他上级视图中朝下对齐，他的下级视图则靠左对齐 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="left"
+            android:padding="10dp">
+            <!-- 内部视图的宽度和高度都是100dp，且背景色为青色 -->
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#00ffff" />
+        </LinearLayout>
+        <!-- 第一格子布局背景为红色，他上级视图中朝上对齐，他的下级视图则靠右对齐 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_gravity="top"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="right"
+            android:padding="10dp">
+            <!-- 内部视图的宽度和高度都是100dp，且背景色为青色 -->
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#00ffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 网格布局 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:columnCount="2"
+        android:id="@+id/unit3_gridlayout"
+        android:rowCount="2"
+        app:layout_constraintTop_toBottomOf="@+id/unit3_linerlayout">
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:background="#ffcccc"
+            android:gravity="center"
+            android:text="浅红色" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:background="#ffaa00"
+            android:gravity="center"
+            android:text="橙色" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:background="#00ff00"
+            android:gravity="center"
+            android:text="绿色" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:background="#660066"
+            android:gravity="center"
+            android:text="深紫色" />
+
+    </GridLayout>
+
+    <!-- HorizontaalScrollView 是水平方向滚动视图，高度为200dp    -->
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:id="@+id/unit3_HorizontalScrollView"
+        app:layout_constraintTop_toBottomOf="@+id/unit3_gridlayout">
+            <!--  水平方向的线性布局，两个子视图的颜色分别为青色和黄色  -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                    <View
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:background="#aaffff"/>
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffff00" />
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="#aaffff"/>
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffff00"/>
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="#aaffff"/>
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffff00" />
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="#aaffff"/>
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="#ffff00"/>
+
+            </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!-- ScrollView 是垂直方向的滚动视图，当前高度为自适应    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/unit3_scrollView"
+        app:layout_constraintTop_toBottomOf="@id/unit3_HorizontalScrollView"
+        android:orientation="vertical">
+            <!-- 垂直方向的线性布局，两个子视图颜色分别为绿色和橙色  -->
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:background="#00ff00" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="800dp"
+                        android:background="#ffffaa"/>
+
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
