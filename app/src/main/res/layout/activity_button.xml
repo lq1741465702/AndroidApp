@@ -5,5 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ButtonActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/button_ly"
+        android:padding="10dp">
 
+        <Button
+            android:id="@+id/on_long_click"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="长按钮监听事件"
+            android:background="#00ff00"/>
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/btn_enable"
+            android:text="禁用测试按钮"
+        android:background="#ffffaa"/>
+    </LinearLayout>
+        <Button
+            android:id="@+id/btn_show"
+            app:layout_constraintTop_toBottomOf="@id/button_ly"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/purple_700"
+            android:text="显示按钮"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
