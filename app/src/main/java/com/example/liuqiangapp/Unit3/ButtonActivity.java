@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.liuqiangapp.Unit3;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.liuqiangapp.R;
 
 public class ButtonActivity extends AppCompatActivity {
     Boolean showStatus;

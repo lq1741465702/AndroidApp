@@ -79,14 +79,15 @@
             android:id="@+id/go_button"
             android:gravity="center"
             android:textAllCaps="false"
-            android:text="go Button" />
+            android:text="Button" />
 
         <Button
             android:layout_width="180dp"
             android:layout_height="60dp"
             android:background="#ffaa00"
             android:gravity="center"
-            android:text="橙色" />
+            android:id="@+id/go_imageView"
+            android:text="ImageView" />
 
         <Button
             android:layout_width="180dp"

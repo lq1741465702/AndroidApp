@@ -1,10 +1,10 @@
-package com.example.myapplication.Util;
+package com.example.liuqiangapp.Util;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
-import com.example.myapplication.MainActivity;
+import com.example.liuqiangapp.MainActivity;
 
 public class FunctionUtil {
     public static String AppName ="";

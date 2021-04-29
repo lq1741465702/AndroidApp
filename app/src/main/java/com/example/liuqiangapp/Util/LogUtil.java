@@ -1,4 +1,4 @@
-package com.example.myapplication.Util;
+package com.example.liuqiangapp.Util;
 
 import android.util.Log;
 

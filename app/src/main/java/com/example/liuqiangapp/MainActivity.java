@@ -1,9 +1,10 @@
-package com.example.myapplication;
+package com.example.liuqiangapp;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -12,22 +13,27 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.Util.FunctionUtil;
+import com.example.liuqiangapp.Unit3.ButtonActivity;
+import com.example.liuqiangapp.Unit3.ImageViewActivity;
+import com.example.liuqiangapp.Unit3.Unit3Activity;
+import com.example.liuqiangapp.Util.FunctionUtil;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     public static Context mCotext;
+    Button btn_go_btn;
+    Button btn_go_imv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: ");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mCotext=getApplicationContext();
+        mCotext = getApplicationContext();
         TextView main_hello = findViewById(R.id.main_hello);
         TextView main_hello_dp = findViewById(R.id.mian_hello_dp);
         TextView main_hello_sp = findViewById(R.id.mian_hello_sp);
         TextView main_hello_px = findViewById(R.id.mian_hello_px);
-
 
 
         LinearLayout mainLinearLayout = findViewById(R.id.mainLinearLayout);
@@ -39,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         //获取main_hello_dp的布局参数(包含宽度和高度)
         ViewGroup.LayoutParams params = main_hello_dp.getLayoutParams();
         //修改布局参数中的宽度数值，注意默认px单位，需要把dp数值转为px数值
-        params.width = FunctionUtil.dip2px(this,300);
+        params.width = FunctionUtil.dip2px(this, 300);
         main_hello_dp.setLayoutParams(params);
 
         main_hello_dp.setOnClickListener(new View.OnClickListener() {
@@ -58,26 +64,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Button btn_go_btn = (Button)findViewById(R.id.go_button);
-        btn_go_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent buttonActivity = new Intent(MainActivity.this,ButtonActivity.class);
-                startActivity(buttonActivity);
-            }
-        });
+        btn_go_btn = (Button) findViewById(R.id.go_button);
+        btn_go_imv = (Button) findViewById(R.id.go_imageView);
 
 
     }
 
     @Override
     protected void onResume() {
+        Log.d(TAG, "onResume: ");
         super.onResume();
         //goMain3Activity();
+        buttonJumpInterface(btn_go_btn, ButtonActivity.class);
+        buttonJumpInterface(btn_go_imv, ImageViewActivity.class);
     }
 
-    private void goMain3Activity(){
-        new Handler().postDelayed(mGoMain3,3000);
+    private void goMain3Activity() {
+        new Handler().postDelayed(mGoMain3, 3000);
     }
 
     private Runnable mGoMain3 = new Runnable() {
@@ -88,8 +91,20 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-    public static Context getContext(){
+    public static Context getContext() {
         return mCotext;
+    }
+
+
+    private void buttonJumpInterface(Button mButton, Class targetClass) {
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(MainActivity.this, targetClass);
+                startActivity(mIntent);
+            }
+        });
+
     }
 
 
