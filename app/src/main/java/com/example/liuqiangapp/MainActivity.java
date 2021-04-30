@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.liuqiangapp.Unit3.ButtonActivity;
+import com.example.liuqiangapp.Unit3.CalculatorActivity;
 import com.example.liuqiangapp.Unit3.ImageViewActivity;
 import com.example.liuqiangapp.Unit3.Unit3Activity;
 import com.example.liuqiangapp.Util.FunctionUtil;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static Context mCotext;
     Button btn_go_btn;
     Button btn_go_imv;
+    Button btn_go_calculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn_go_btn = (Button) findViewById(R.id.go_button);
         btn_go_imv = (Button) findViewById(R.id.go_imageView);
-
+        btn_go_calculator = (Button) findViewById(R.id.go_unit3_calculator);
 
     }
 
@@ -77,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         //goMain3Activity();
         buttonJumpInterface(btn_go_btn, ButtonActivity.class);
         buttonJumpInterface(btn_go_imv, ImageViewActivity.class);
+        buttonJumpInterface(btn_go_calculator, CalculatorActivity.class);
     }
 
     private void goMain3Activity() {

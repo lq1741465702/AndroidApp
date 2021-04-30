@@ -94,7 +94,8 @@
             android:layout_height="60dp"
             android:background="#00ff00"
             android:gravity="center"
-            android:text="绿色" />
+            android:id="@+id/go_unit3_calculator"
+            android:text="简易计算器" />
 
         <Button
             android:layout_width="180dp"
