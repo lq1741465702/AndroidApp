@@ -258,7 +258,7 @@
                 android:width="90dp"
                 android:height="75dp"
                 android:gravity="center"
-                android:text="=="
+                android:text="="
                 android:textColor="@color/black"
                 android:textSize="30sp"
                 app:backgroundTint="#009688" />
