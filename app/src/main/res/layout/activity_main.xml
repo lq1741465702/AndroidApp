@@ -102,7 +102,8 @@
             android:layout_height="60dp"
             android:background="#660066"
             android:gravity="center"
-            android:text="深紫色" />
+            android:id="@+id/go_unit4"
+            android:text="Unit4" />
 
     </GridLayout>
 

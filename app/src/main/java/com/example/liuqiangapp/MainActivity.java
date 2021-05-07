@@ -17,6 +17,7 @@ import com.example.liuqiangapp.Unit3.ButtonActivity;
 import com.example.liuqiangapp.Unit3.CalculatorActivity;
 import com.example.liuqiangapp.Unit3.ImageViewActivity;
 import com.example.liuqiangapp.Unit3.Unit3Activity;
+import com.example.liuqiangapp.Unit4.ActLifeActivity;
 import com.example.liuqiangapp.Util.FunctionUtil;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_go_btn;
     Button btn_go_imv;
     Button btn_go_calculator;
+    Button btn_go_unit4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         btn_go_btn = (Button) findViewById(R.id.go_button);
         btn_go_imv = (Button) findViewById(R.id.go_imageView);
         btn_go_calculator = (Button) findViewById(R.id.go_unit3_calculator);
+        btn_go_unit4 = (Button)findViewById(R.id.go_unit4);
 
     }
 
@@ -80,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         buttonJumpInterface(btn_go_btn, ButtonActivity.class);
         buttonJumpInterface(btn_go_imv, ImageViewActivity.class);
         buttonJumpInterface(btn_go_calculator, CalculatorActivity.class);
+        buttonJumpInterface(btn_go_unit4, ActLifeActivity.class);
     }
 
     private void goMain3Activity() {

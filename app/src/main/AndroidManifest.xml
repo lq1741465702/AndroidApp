@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Unit3.CalculatorActivity"></activity>
+        <activity android:name=".Unit4.ActLifeActivity"></activity>
+        <activity android:name=".Unit3.CalculatorActivity" />
         <activity android:name=".Unit3.ImageViewActivity" />
         <activity android:name=".Unit3.ButtonActivity" />
         <activity android:name=".Unit3.Unit3Activity" />

@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name" >Liuqiang</string>
-    <string name="hello_world" >Hello World!</string>
-    <string name="second_page" >second page</string>
-    <string name="go_second_page" >go second_page</string>
-    <string name="calculator" >calculator</string>
-    <string name="simple_calculator" >simple calculator</string>
+    <string name="app_name">Liuqiang</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="second_page">second page</string>
+    <string name="go_second_page">go second_page</string>
+    <string name="calculator">calculator</string>
+    <string name="simple_calculator">simple calculator</string>
 
 </resources>
