@@ -13,12 +13,13 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.liuqiangapp.Unit3.ButtonActivity;
-import com.example.liuqiangapp.Unit3.CalculatorActivity;
-import com.example.liuqiangapp.Unit3.ImageViewActivity;
-import com.example.liuqiangapp.Unit3.Unit3Activity;
-import com.example.liuqiangapp.Unit4.ActLifeActivity;
+import com.example.liuqiangapp.chapter03.ButtonActivity;
+import com.example.liuqiangapp.chapter03.CalculatorActivity;
+import com.example.liuqiangapp.chapter03.ImageViewActivity;
+import com.example.liuqiangapp.chapter03.Chapter03MainActivity;
+import com.example.liuqiangapp.chapter04.ActLifeActivity;
 import com.example.liuqiangapp.Util.FunctionUtil;
+import com.example.liuqiangapp.chapter04.Chapter04MainActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_go_btn;
     Button btn_go_imv;
     Button btn_go_calculator;
-    Button btn_go_unit4;
+    Button btn_go_chapter04;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         main_hello_sp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent secondPage = new Intent(MainActivity.this, Unit3Activity.class);
+                Intent secondPage = new Intent(MainActivity.this, Chapter03MainActivity.class);
                 MainActivity.this.startActivity(secondPage);
             }
         });
@@ -70,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
 
         btn_go_btn = (Button) findViewById(R.id.go_button);
         btn_go_imv = (Button) findViewById(R.id.go_imageView);
-        btn_go_calculator = (Button) findViewById(R.id.go_unit3_calculator);
-        btn_go_unit4 = (Button)findViewById(R.id.go_unit4);
+        btn_go_calculator = (Button) findViewById(R.id.go_chapter03_calculator);
+        btn_go_chapter04 = (Button)findViewById(R.id.go_chapter04);
 
     }
 
@@ -80,10 +81,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onResume: ");
         super.onResume();
         //goMain3Activity();
-        buttonJumpInterface(btn_go_btn, ButtonActivity.class);
-        buttonJumpInterface(btn_go_imv, ImageViewActivity.class);
-        buttonJumpInterface(btn_go_calculator, CalculatorActivity.class);
-        buttonJumpInterface(btn_go_unit4, ActLifeActivity.class);
+        FunctionUtil.buttonJumpInterface(getContext(),btn_go_btn, ButtonActivity.class);
+        FunctionUtil.buttonJumpInterface(getContext(),btn_go_imv, ImageViewActivity.class);
+        FunctionUtil.buttonJumpInterface(getContext(),btn_go_calculator, CalculatorActivity.class);
+        FunctionUtil.buttonJumpInterface(getContext(),btn_go_chapter04, Chapter04MainActivity.class);
     }
 
     private void goMain3Activity() {
@@ -99,20 +100,14 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static Context getContext() {
-        return mCotext;
-    }
-
-
-    private void buttonJumpInterface(Button mButton, Class targetClass) {
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent mIntent = new Intent(MainActivity.this, targetClass);
-                startActivity(mIntent);
-            }
-        });
+        if (mCotext!=null){
+            return mCotext;
+        }else {
+            return getContext();
+        }
 
     }
+
 
 
 }

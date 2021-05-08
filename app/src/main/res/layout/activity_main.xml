@@ -41,7 +41,7 @@
             android:id="@+id/mian_hello_sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="30 sp go unit3 page"
+            android:text="30 sp go chapter03 page"
             android:layout_marginTop="10sp"
             android:textSize="30sp" />
     </LinearLayout>
@@ -94,7 +94,7 @@
             android:layout_height="60dp"
             android:background="#00ff00"
             android:gravity="center"
-            android:id="@+id/go_unit3_calculator"
+            android:id="@+id/go_chapter03_calculator"
             android:text="简易计算器" />
 
         <Button
@@ -102,8 +102,8 @@
             android:layout_height="60dp"
             android:background="#660066"
             android:gravity="center"
-            android:id="@+id/go_unit4"
-            android:text="Unit4" />
+            android:id="@+id/go_chapter04"
+            android:text="Chapter04" />
 
     </GridLayout>
 

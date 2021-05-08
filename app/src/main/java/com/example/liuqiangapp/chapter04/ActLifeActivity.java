@@ -1,4 +1,4 @@
-package com.example.liuqiangapp.Unit4;
+package com.example.liuqiangapp.chapter04;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,13 +8,18 @@ import android.widget.TextView;
 
 import com.example.liuqiangapp.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ActLifeActivity extends AppCompatActivity {
     private static final String TAG = "ActLifeActivity";
     private TextView mActStatus;
+    private String mActStatusLog="";
 
     private void refreshActLife(String actStatus){
         Log.d(TAG, "refreshActLife: "+actStatus);
-        mActStatus.setText(actStatus);
+        mActStatusLog=String.format("%s%s %s %s\n",mActStatusLog,(new SimpleDateFormat("HH:mm:ss.SSS").format(new Date())),TAG,actStatus);
+        mActStatus.setText(mActStatusLog);
     }
 
     @Override

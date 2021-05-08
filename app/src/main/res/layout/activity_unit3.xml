@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Unit3.Unit3Activity">
+    tools:context=".chapter03.Chapter03MainActivity">
     <!-- 最外层布局背景为橙色，它的下级视图在水平方向排列 -->
     <LinearLayout
         android:id="@+id/unit3_linerlayout"

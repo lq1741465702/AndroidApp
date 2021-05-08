@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Unit3.CalculatorActivity">
+    tools:context=".chapter03.CalculatorActivity">
 
     <LinearLayout
         android:id="@+id/calculator_ll"

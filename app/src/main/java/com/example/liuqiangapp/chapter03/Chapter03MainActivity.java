@@ -1,4 +1,4 @@
-package com.example.liuqiangapp.Unit3;
+package com.example.liuqiangapp.chapter03;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.liuqiangapp.R;
 
-public class Unit3Activity extends AppCompatActivity {
+public class Chapter03MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

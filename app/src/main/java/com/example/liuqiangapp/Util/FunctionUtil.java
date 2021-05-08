@@ -1,8 +1,11 @@
 package com.example.liuqiangapp.Util;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.liuqiangapp.MainActivity;
 
@@ -32,6 +35,27 @@ public class FunctionUtil {
             e.printStackTrace();
         }
         return AppName;
+    }
+
+    /**
+     * Button跳转接口
+     * @param mCotext
+     * @param mButton
+     * @param targetClass
+     */
+    public static void buttonJumpInterface(Context mCotext, Button mButton, Class targetClass) {
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mButton!= null){
+                    Intent mIntent = new Intent(mCotext, targetClass);
+//                    mIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                    mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    mCotext.startActivity(mIntent);
+                }
+
+            }
+        });
     }
 
 }
