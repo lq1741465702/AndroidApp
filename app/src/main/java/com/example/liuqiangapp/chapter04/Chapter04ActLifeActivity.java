@@ -11,7 +11,7 @@ import com.example.liuqiangapp.R;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ActLifeActivity extends AppCompatActivity {
+public class Chapter04ActLifeActivity extends AppCompatActivity {
     private static final String TAG = "ActLifeActivity";
     private TextView mActStatus;
     private String mActStatusLog="";

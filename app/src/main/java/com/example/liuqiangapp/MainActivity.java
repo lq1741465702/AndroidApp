@@ -17,7 +17,6 @@ import com.example.liuqiangapp.chapter03.ButtonActivity;
 import com.example.liuqiangapp.chapter03.CalculatorActivity;
 import com.example.liuqiangapp.chapter03.ImageViewActivity;
 import com.example.liuqiangapp.chapter03.Chapter03MainActivity;
-import com.example.liuqiangapp.chapter04.ActLifeActivity;
 import com.example.liuqiangapp.Util.FunctionUtil;
 import com.example.liuqiangapp.chapter04.Chapter04MainActivity;
 

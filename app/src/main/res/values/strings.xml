@@ -5,5 +5,11 @@
     <string name="go_second_page">go second_page</string>
     <string name="calculator">calculator</string>
     <string name="simple_calculator">simple calculator</string>
-
+    <string name="weather">Sunny</string>
+    <string name="first_short">first</string>
+    <string name="first_long">first page</string>
+    <string name="second_short">second</string>
+    <string name="second_long">second Page</string>
+    <string name="third_short">third</string>
+    <string name="third_long">third Page</string>
 </resources>
