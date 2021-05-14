@@ -8,9 +8,9 @@ android {
 
     defaultConfig {
         //模块包名
-        applicationId "com.example.myapplication"
+        applicationId "com.example.liuqiangapp"
         //APP运行的最小SDK版本，19表示至少要Android4.4
-        minSdkVersion 19
+        minSdkVersion 26
         //目标设备的SDK版本号，表示APP最希望在哪个版本上运行
         targetSdkVersion 30
         //APP的应用版本号

@@ -1,41 +1,42 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
         android:shortcutId="first"
-        android:enable="true"
+        android:enabled="true"
         android:icon="@mipmap/ic_launcher"
         android:shortcutShortLabel = "@string/first_short"
         android:shortcutLongLabel = "@string/first_long">
         <!-- targetClass指定了点击菜单后跳转的页面        -->
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.example.liuqiangapp.chapter04"
+            android:targetPackage="com.example.liuqiangapp"
             android:targetClass="com.example.liuqiangapp.chapter04.Chapter04ActStartActivity"/>
         <categories android:name="android.shortcut.conversation"/>
     </shortcut>
 
     <shortcut
         android:shortcutId="second"
-        android:enable="true"
+        android:enabled="true"
         android:icon="@mipmap/ic_launcher"
         android:shortcutShortLabel = "@string/second_short"
         android:shortcutLongLabel = "@string/second_long">
         <!-- targetClass指定了点击菜单后跳转的页面        -->
+        <!-- android:targetPackage是applicationid，不是包名，从build.gradle里面拿    -->
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.example.liuqiangapp.chapter04"
+            android:targetPackage="com.example.liuqiangapp"
             android:targetClass="com.example.liuqiangapp.chapter04.Chapter04JumpFirstActivity"/>
         <categories android:name="android.shortcut.conversation"/>
     </shortcut>
     <shortcut
         android:shortcutId="third"
-        android:enable="true"
+        android:enabled="true"
         android:icon="@mipmap/ic_launcher"
         android:shortcutShortLabel = "@string/third_short"
         android:shortcutLongLabel = "@string/third_long">
         <!-- targetClass指定了点击菜单后跳转的页面        -->
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.example.liuqiangapp.chapter04"
+            android:targetPackage="com.example.liuqiangapp"
             android:targetClass="com.example.liuqiangapp.chapter04.Chapter04LoginInputActivity"/>
         <categories android:name="android.shortcut.conversation"/>
     </shortcut>
